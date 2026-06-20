@@ -1,0 +1,231 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgba(245,245,245,1);
+    transition: 0.3s;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+input,
+select{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid rgba(200,200,200,1);
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(52,152,219,1);
+    color: rgba(255,255,255,1);
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: rgba(41,128,185,1);
+    transform: scale(1.05);
+}
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card{
+    width: 260px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3{
+    margin-top: 10px;
+}
+
+.card p{
+    margin: 5px 0;
+}
+
+.cartItem{
+    background-color: rgba(255,255,255,1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+#wishlistItems div{
+    background-color: rgba(255,255,255,1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+#customerName,
+#phone,
+#address,
+#couponInput{
+    width: 300px;
+}
+
+#Total{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.model{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.model-content{
+    width: 400px;
+    background-color: rgba(255,255,255,1);
+
+    margin: 100px auto;
+    padding: 20px;
+
+    border-radius: 10px;
+    position: relative;
+}
+
+.model-content span{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#toast{
+    display: none;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: rgba(46,204,113,1);
+    color: rgba(255,255,255,1);
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+}
+
+.dark-mode{
+    background-color: rgba(30,30,30,1);
+    color: rgba(255,255,255,1);
+}
+
+.dark-mode .card,
+.dark-mode .cartItem,
+.dark-mode #wishlistItems div,
+.dark-mode .model-content{
+    background-color: rgba(50,50,50,1);
+    color: rgba(255,255,255,1);
+}
+
+.dark-mode input,
+.dark-mode select{
+    background-color: rgba(70,70,70,1);
+    color: rgba(255,255,255,1);
+    border: 1px solid rgba(120,120,120,1);
+}
+
+.dark-mode button{
+    background-color: rgba(52,152,219,1);
+}
+
+.dark-mode button:hover{
+    background-color: rgba(41,128,185,1);
+}
+
+hr{
+    margin: 30px 0;
+}
+
+#orderSummary{
+    background-color: rgba(255,255,255,1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark-mode #orderSummary{
+    background-color: rgba(50,50,50,1);
+}
+
+#orders div{
+    background-color: rgba(255,255,255,1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark-mode #orders div{
+    background-color: rgba(50,50,50,1);
+}
+
+@media(max-width:768px){
+
+    #products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .model-content{
+        width: 90%;
+    }
+
+    #customerName,
+    #phone,
+    #address,
+    #couponInput{
+        width: 90%;
+    }
+}
+
+.card button:last-child{
+    margin-top:15px;
+}
